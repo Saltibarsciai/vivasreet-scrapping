@@ -15,6 +15,14 @@ class CreateCarsTable extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title')->default('Not provided');
+            $table->longText('description')->default('Not provided');
+            $table->unsignedInteger('ad_id')->default(0);
+            $table->string('price')->default('Not provided');
+            $table->unsignedInteger('year')->default(0);
+            $table->string('mileage')->default('Not provided');
+            $table->bigInteger('phone')->default(0);
+            $table->string('link_to_website')->default('Not provided');
             $table->timestamps();
         });
     }
