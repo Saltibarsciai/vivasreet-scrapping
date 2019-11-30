@@ -40,5 +40,6 @@
                 </article>
             </li>
         </ul>
+{{--        {{dd($html)}}--}}
     </main>
 @stop
