@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Car;
 use App\Http\Requests\LinkRequest;
+use App\Services\CurlExecService;
+use App\Services\ScraperService;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class CarController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -21,7 +24,7 @@ class CarController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -31,19 +34,21 @@ class CarController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param LinkRequest $request
+     * @param ScraperService $scraper
+     * @return Response
      */
-    public function store(LinkRequest $request)
+    public function store(LinkRequest $request, ScraperService $scraper)
     {
-        dd($request->link);
+        $scraper->scrapeVivaStreet($request->link);
+        return redirect()->route('cars.index');
     }
 
     /**
      * Display the specified resource.
      *
      * @param  \App\Car  $car
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show(Car $car)
     {
@@ -54,7 +59,7 @@ class CarController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Car  $car
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit(Car $car)
     {
@@ -66,7 +71,7 @@ class CarController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Car  $car
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, Car $car)
     {
@@ -77,7 +82,7 @@ class CarController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Car  $car
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy(Car $car)
     {

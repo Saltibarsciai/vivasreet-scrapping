@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6da14443-e9c7-4175-a661-14ff79325cee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Services/CurlExecService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/ScraperService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Car.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Car.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,6 +124,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dominykas\Projects\orca-task\app\Models" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dominykas\Projects\orca-task\resources\views\partials" />
     </key>
@@ -157,7 +160,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575026555462</updated>
       <workItem from="1575026561319" duration="10690000" />
-      <workItem from="1575109191012" duration="28937000" />
+      <workItem from="1575109191012" duration="32686000" />
     </task>
     <servers />
   </component>
