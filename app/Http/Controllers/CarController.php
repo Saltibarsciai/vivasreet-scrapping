@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Car;
+use App\Http\Requests\LinkRequest;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -14,7 +15,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        //
+        return view('partials.master');
     }
 
     /**
@@ -33,9 +34,9 @@ class CarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LinkRequest $request)
     {
-        //
+        dd($request->link);
     }
 
     /**

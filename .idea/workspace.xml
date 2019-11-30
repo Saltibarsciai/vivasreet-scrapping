@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6da14443-e9c7-4175-a661-14ff79325cee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/orca-task.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/orca-task.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/CurlExecService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CarController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -160,7 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575026555462</updated>
       <workItem from="1575026561319" duration="10690000" />
-      <workItem from="1575109191012" duration="17427000" />
+      <workItem from="1575109191012" duration="28937000" />
     </task>
     <servers />
   </component>
