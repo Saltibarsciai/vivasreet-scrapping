@@ -12,63 +12,29 @@
         </form>
         <h1 class="my-5 font-weight-bold">LIST</h1>
         <ul class="list-group">
-            <li class="list-group-item d-flex p-4">
-                <aside>
-                    <div class="d-flex mt-1">
-                        <img class="mr-1" src="https://colorlib.com/unite/wp-content/uploads/sites/7/2013/03/image-alignment-150x150.jpg" alt="150">
-                        <img class="mr-1"  src="https://colorlib.com/unite/wp-content/uploads/sites/7/2013/03/image-alignment-150x150.jpg" alt="150">
-                    </div>
-                    <div class="d-flex mt-1">
-                        <img class="mr-1" src="https://colorlib.com/unite/wp-content/uploads/sites/7/2013/03/image-alignment-150x150.jpg" alt="150">
-                        <img class="mr-1" src="https://colorlib.com/unite/wp-content/uploads/sites/7/2013/03/image-alignment-150x150.jpg" alt="150">
-                    </div>
-                </aside>
-                <article class="container">
-                    <header class="font-weight-bolder display-4">
-                        Header
-                    </header>
-                    <p>
-                        olorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/upload
-                        olorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/upload
-                        olorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/upload
-                    </p>
-                    <p>
-                        olorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/upload
-                    </p>
-                    <a href="#" class="btn btn-primary">
-                        Go to website
-                    </a>
-                </article>
-            </li>
-            <li class="list-group-item d-flex p-4">
-                <aside>
-                    <div class="d-flex mt-1">
-                        <img class="mr-1" src="https://colorlib.com/unite/wp-content/uploads/sites/7/2013/03/image-alignment-150x150.jpg" alt="150">
-                        <img class="mr-1"  src="https://colorlib.com/unite/wp-content/uploads/sites/7/2013/03/image-alignment-150x150.jpg" alt="150">
-                    </div>
-                    <div class="d-flex mt-1">
-                        <img class="mr-1" src="https://colorlib.com/unite/wp-content/uploads/sites/7/2013/03/image-alignment-150x150.jpg" alt="150">
-                        <img class="mr-1" src="https://colorlib.com/unite/wp-content/uploads/sites/7/2013/03/image-alignment-150x150.jpg" alt="150">
-                    </div>
-                </aside>
-                <article class="container">
-                    <header class="font-weight-bolder display-4">
-                        Header
-                    </header>
-                    <p>
-                        olorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/upload
-                        olorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/upload
-                        olorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/upload
-                    </p>
-                    <p>
-                        olorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/uploadolorlib.com/unite/wp-content/upload
-                    </p>
-                    <a href="#" class="btn btn-primary">
-                        Go to website
-                    </a>
-                </article>
-            </li>
+            @foreach($data as $item)
+                <li class="list-group-item d-flex p-4">
+                    <aside class="align-self-center mr-3 images-grid">
+                        @foreach($item->images as $i => $image)
+                            <img class="mr-1" width="150px" height="150px" src="{{$image->path}}" alt="{{$image->id}}"/>
+                        @endforeach
+                    </aside>
+                    <article class="container">
+                        <header class="font-weight-bolder">
+                            <h3>{{$item->title}}</h3>
+                        </header>
+                        <p>
+                            {{$item->description}}
+                        </p>
+                        <p>
+                            Ad ID: {{$item->ad_id}} | Price: {{$item->price}} | Year: {{$item->year}} | Mileage: {{$item->mileage}} | Phone: {{$item->phone}}
+                        </p>
+                        <a href="{{$item->link_to_website}}" class="btn btn-primary">
+                            Go to website
+                        </a>
+                    </article>
+                </li>
+            @endforeach
         </ul>
-{{--        {{dd($html)}}--}}
     </main>
 @stop

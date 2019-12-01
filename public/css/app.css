@@ -11361,3 +11361,13 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.images-grid{
+    display: grid;
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 150px 150px;
+    grid-gap: 10px;
+}
+.images-grid div{
+    background-size: 100%;
+    background-position: center;
+}

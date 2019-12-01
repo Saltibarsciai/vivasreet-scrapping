@@ -73,7 +73,7 @@ class ScrapingMethods
         }
         return false;
     }
-    public function get($index, $tag)
+    public function getPhoto($index, $tag)
     {
         $selector = "img[id=vs_photos_img_$index]";
         if(isset($this->carPageHtml->find($selector, 0)->{$tag})){
