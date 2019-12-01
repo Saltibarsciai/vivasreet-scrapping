@@ -16,7 +16,7 @@ class CreateCarsTable extends Migration
         Schema::create('cars', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title')->default('Not provided');
-            $table->longText('description')->default('Not provided');
+            $table->longText('description')->nullable();
             $table->unsignedInteger('ad_id')->default(0);
             $table->string('price')->default('Not provided');
             $table->unsignedInteger('year')->default(0);
