@@ -20,7 +20,7 @@ class ScrapingMethods
     public function __construct(simple_html_dom_node $carHtml)
     {
         $this->linkToCarPage = $carHtml->children(0)->href;
-        $carPageResponse = CurlExecService::curlExec($this->linkToCarPage);
+        $carPageResponse = app(CurlExecuteService::class)->curlExecute($this->linkToCarPage);
         $this->carPageHtml = HtmlDomParser::str_get_html($carPageResponse);
     }
 

@@ -34,7 +34,7 @@ class Advertisement extends ScrapingMethods
     private function createCarRecord(): void
     {
         //If record exists
-        if ($record = Car::where('ad_id', $this->advertId())->first()) {
+        if ($record = Car::where('ad_id', $this->advertId())->without('images')->first()) {
             $this->car = $record;
         }
         //If not, then create
@@ -77,7 +77,7 @@ class Advertisement extends ScrapingMethods
         if (Image::where('path', '/storage/' . $path)->first()) {
             return;
         }
-        $data = CurlExecService::curlExec($this->imageSource);
+        $data = app(CurlExecuteService::class)->curlExecute($this->imageSource);
         Storage::disk('public')->put($path, $data);
         $this->car->images()->create([
             'path' => '/storage/' . $path
