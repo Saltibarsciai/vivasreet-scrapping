@@ -9,6 +9,9 @@ use KubAT\PhpSimple\HtmlDomParser;
 
 class Scraper
 {
+    /**
+     * @param string $link
+     */
     public function scrapeVivaStreet(string $link): void
     {
         set_time_limit(0);
@@ -21,7 +24,7 @@ class Scraper
         $selector = 'div[class=clad]';
         $listOfCarsHtml = $MainPageHtml->find($selector);
 
-        foreach ($listOfCarsHtml as $listItemHtml){
+        foreach ($listOfCarsHtml as $listItemHtml) {
             new Advertisement($listItemHtml);
         }
     }

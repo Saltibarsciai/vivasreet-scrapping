@@ -11,10 +11,6 @@
 |
 */
 
-use App\Services\CurlExecService;
-use Illuminate\Support\Facades\Storage;
-use KubAT\PhpSimple\HtmlDomParser;
-
 Route::get('/', function () {
     return redirect()->route('cars.index');
 });

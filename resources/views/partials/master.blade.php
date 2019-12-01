@@ -1,7 +1,7 @@
 @extends('layout')
-
 @section('content')
     <main class="w-75 mx-auto">
+        <img src="https://uglymugs.org/um/uploads/Vivastreet-logo-grey_picmonkeyed.jpg" class="w-50 mt-2" alt="vivastreet">
         <form class="form-inline w-100 p-2 mt-5" method="post" action="{{route('cars.store')}}">
             @csrf
             <div style="width: 70%; margin-right: 5%">
@@ -14,7 +14,7 @@
         <ul class="list-group">
             @foreach($data as $item)
                 <li class="list-group-item d-flex p-4">
-                    <aside class="align-self-center mr-3 images-grid">
+                    <aside class="mr-3 images-grid">
                         @foreach($item->images as $i => $image)
                             <img class="mr-1" width="150px" height="150px" src="{{$image->path}}" alt="{{$image->id}}"/>
                         @endforeach
