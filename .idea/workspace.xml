@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6da14443-e9c7-4175-a661-14ff79325cee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Ads/Advertisement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Ads/ScrapingMethods.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CarController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Car.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Car.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Advertisement.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Advertisement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Advertisement.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/CurlExecService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CurlExecService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_29_112539_create_cars_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_29_112539_create_cars_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ScraperService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Ads/Scraper.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,6 +128,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dominykas\Projects\orca-task\app\Ads" />
       <recent name="C:\Users\Dominykas\Projects\orca-task\app\Models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -162,7 +164,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575026555462</updated>
       <workItem from="1575026561319" duration="10690000" />
-      <workItem from="1575109191012" duration="42337000" />
+      <workItem from="1575109191012" duration="54467000" />
     </task>
     <servers />
   </component>

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Car;
 use App\Http\Requests\LinkRequest;
 use App\Services\CurlExecService;
-use App\Services\ScraperService;
+use App\Services\Scraper;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -35,10 +35,10 @@ class CarController extends Controller
      * Store a newly created resource in storage.
      *
      * @param LinkRequest $request
-     * @param ScraperService $scraper
+     * @param Scraper $scraper
      * @return Response
      */
-    public function store(LinkRequest $request, ScraperService $scraper)
+    public function store(LinkRequest $request, Scraper $scraper)
     {
         $scraper->scrapeVivaStreet($request->link);
         return redirect()->route('cars.index');

@@ -3,24 +3,20 @@
 
 namespace App\Services;
 
-
 use KubAT\PhpSimple\HtmlDomParser;
 
-class ScraperService
+class Scraper
 {
-    /**
-     * @param string $link
-     */
     public function scrapeVivaStreet(string $link): void
     {
+        $selector = 'div[class=clad]';
+        set_time_limit(0);
         $curlResponse = CurlExecService::curlExec($link);
         $MainPageHtml = HtmlDomParser::str_get_html($curlResponse);
-        $listOfCarsHtml = $MainPageHtml->find('div[class=clad]');
-        $this->iterateOverEveryResult($listOfCarsHtml);
-    }
-    private function iterateOverEveryResult($listOfCarsHtml){
+        $listOfCarsHtml = $MainPageHtml->find($selector);
+
         foreach ($listOfCarsHtml as $index => $listItemHtml){
-            $ad = new Advertisement($listItemHtml);
+            new Advertisement($listItemHtml);
         }
     }
 }
