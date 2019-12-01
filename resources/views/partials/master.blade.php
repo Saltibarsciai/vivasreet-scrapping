@@ -8,7 +8,7 @@
                 <label class="d-none" for="inputPassword"></label>
                 <input name="link" type="text" class="form-control w-100" id="inputPassword" value="https://search.vivastreet.co.uk/cars/gb" placeholder="https://search.vivastreet.co.uk/cars/gb"/>
             </div>
-            <button type="submit" class="btn btn-primary w-25">Download</button>
+            <button type="submit" class="btn btn-primary w-25">Download content</button>
         </form>
         <h1 class="my-5 font-weight-bold">LIST</h1>
         <ul class="list-group">
