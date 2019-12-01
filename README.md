@@ -1,8 +1,15 @@
-<p align="center"><img src="https://uglymugs.org/um/uploads/Vivastreet-logo-grey_picmonkeyed.jpg" width="100%"></p>
+<p align="center"><img src="https://i.ibb.co/YZ0tGTX/Screenshot-8.png" width="100%"></p>
+
+<p align="center"><img src="https://i.ibb.co/xsgJdqw/Screenshot-6.png" width="100%"></p>
+
+
 
 # VivaStreet scraping
 
-Downloading takes some time, be patient.
+
+Live Demo: http://obscure-journey-81618.herokuapp.com/cars 
+
+(Heroku can't create good symlink, images will show 'alt' text, should have used s3)
 
 ## Getting Started
 
