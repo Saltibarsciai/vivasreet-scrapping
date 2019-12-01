@@ -14,6 +14,7 @@ class CurlExecuteService
         $this->ch = curl_init();
         curl_setopt($this->ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (compatible; CrawlBot/1.0.0)');
         curl_setopt($this->ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
+        curl_setopt($this->ch, CURLOPT_ENCODING, "gzip");
         curl_setopt($this->ch, CURLOPT_TCP_FASTOPEN, true);
         curl_setopt($this->ch, CURLOPT_FAILONERROR, true);
         curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);

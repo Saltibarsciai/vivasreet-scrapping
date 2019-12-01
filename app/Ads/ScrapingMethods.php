@@ -83,9 +83,9 @@ class ScrapingMethods
     }
 
     /**
-     * @return bool
+     * @return bool|string
      */
-    public function phone(): bool
+    public function phone()
     {
         $selector = "span[class=phone_link]";
         //vendor can choose to provide email instead of phone

@@ -27,7 +27,7 @@
                             {{$item->description}}
                         </p>
                         <p>
-                            Ad ID: {{$item->ad_id}} | Price: {{$item->price}} | Year: {{$item->year}} | Mileage: {{$item->mileage}} | Phone: {{$item->phone}}
+                            Ad ID: {{$item->ad_id}} | Price: {{$item->price}} | Year: {{$item->year}} | Mileage: {{$item->mileage}}  {{$item->phone === 0 ?:"| Phone: $item->phone"}}
                         </p>
                         <a href="{{$item->link_to_website}}" class="btn btn-primary">
                             Go to website

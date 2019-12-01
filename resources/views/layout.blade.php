@@ -66,8 +66,5 @@
     </head>
     <body>
             @yield('content')
-{{--            {{$html[2][0]}}--}}
-{{--           {!! $html !!}--}}
-{{--           {{dd($html)}}--}}
     </body>
 </html>
