@@ -8,8 +8,8 @@
         <form class="form-inline w-100 p-2 mt-5" method="post" action="{{route('cars.store')}}">
             @csrf
             <div style="width: 70%; margin-right: 5%">
-                <label class="d-none" for="inputPassword"></label>
-                <input name="link" type="text" class="form-control w-100" id="inputPassword" value="https://search.vivastreet.co.uk/cars/gb" placeholder="https://search.vivastreet.co.uk/cars/gb"/>
+                <label class="d-none" for="inputLink"></label>
+                <input name="link" type="text" class="form-control w-100" id="inputLink" value="https://search.vivastreet.co.uk/cars/gb" placeholder="https://search.vivastreet.co.uk/cars/gb"/>
             </div>
             <button type="submit" class="btn btn-primary w-25">Download content</button>
         </form>
