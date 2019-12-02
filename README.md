@@ -9,7 +9,6 @@
 
 Live Demo: http://obscure-journey-81618.herokuapp.com/cars 
 
-(Heroku can't create good symlink, images will show 'alt' text, should have used s3)
 
 ## Getting Started
 
@@ -33,9 +32,6 @@ cp .env.example .env
 ```
 ```
 php artisan key:generate
-```
-```
-php artisan storage:link
 ```
 ```
 php artisan migrate
@@ -65,6 +61,8 @@ Scraping only available on cars category - https://search.vivastreet.co.uk/cars/
 6. Storing resources in storage.
 
 7. Creating blade file and pupulating it with data
+
+I had to put images directly into the public folder, because heroku doesn't support symlinks
 
 
 
