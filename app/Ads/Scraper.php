@@ -14,11 +14,11 @@ class Scraper
      */
     public function scrapeVivaStreet(string $link): void
     {
-        set_time_limit(180);
-        //Delete previous website data
-        Car::query()->delete();
-        (new Filesystem())->deleteDirectory(public_path('/storage/*'));
+        set_time_limit(0);
+        //Keep data, but remove from display
+        Car::query()->update(['active' => false]);
 
+        //New website
         $curlResponse = app(CurlExecuteService::class)->curlExecute($link);
         $MainPageHtml = HtmlDomParser::str_get_html($curlResponse);
         $selector = 'div[class=clad]';
@@ -26,7 +26,7 @@ class Scraper
 
         foreach ($listOfCarsHtml as $index => $listItemHtml) {
             if ($index >= 10) {
-                return;
+                break;
             }
             new Advertisement($listItemHtml);
         }

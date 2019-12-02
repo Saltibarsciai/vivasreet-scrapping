@@ -7,11 +7,12 @@ use simple_html_dom\simple_html_dom_node;
 
 class ScrapingMethods
 {
-
     /**@var simple_html_dom_node $carPageHtml*/
     private $carPageHtml;
     /**@var string $linkToCarPage*/
     private $linkToCarPage;
+
+    private const PROFILE_SELECTOR = "img[class=single-img-only]";
 
     /**
      * ScrapingMethods constructor.
@@ -83,16 +84,24 @@ class ScrapingMethods
     }
 
     /**
-     * @return bool|string
+     * @param string $selector
+     * @return bool
+     */
+    public function hasPhone(string $selector): bool
+    {
+        return isset($this->carPageHtml->find($selector, 0)->{'data-phone-number'});
+    }
+
+    /**
+     * @return integer
      */
     public function phone()
     {
         $selector = "span[class=phone_link]";
-        //vendor can choose to provide email instead of phone
-        if (isset($this->carPageHtml->find($selector, 0)->{'data-phone-number'})) {
+        if ($this->hasPhone($selector)) {
             return $this->carPageHtml->find($selector, 0)->{'data-phone-number'};
         }
-        return false;
+        return 0;
     }
 
     /**
@@ -104,29 +113,46 @@ class ScrapingMethods
     }
 
     /**
-     * @return bool|string
+     * @return bool
+     */
+    public function hasProfile(): bool
+    {
+        return isset($this->carPageHtml->find("img[class=single-img-only]", 0)->src);
+    }
+    /**
+     * @return string
      */
     public function profile()
     {
-        $selector = "img[class=single-img-only]";
-        if (isset($this->carPageHtml->find($selector, 0)->src)) {
-            return $this->carPageHtml->find($selector, 0)->src;
+        if ($this->hasProfile()) {
+            return $this->carPageHtml->find(self::PROFILE_SELECTOR, 0)->src;
         }
-        return false;
+        return "Not provided";
     }
 
     /**
-     * @param $index
-     * @param $tag
-     * @return bool|string
+     * @param int $index
+     * @param string $tag
+     * @return bool
      */
-    public function getPhoto($index, $tag)
+    public function hasPhoto(int $index, string $tag)
     {
         $selector = "img[id=vs_photos_img_$index]";
-        if (isset($this->carPageHtml->find($selector, 0)->{$tag})) {
+        return isset($this->carPageHtml->find($selector, 0)->{$tag});
+    }
+
+    /**
+     * @param int $index
+     * @param string $tag
+     * @return string
+     */
+    public function getPhoto(int $index, string $tag)
+    {
+        $selector = "img[id=vs_photos_img_$index]";
+        if ($this->hasPhoto($index, $tag)) {
             return $this->carPageHtml->find($selector, 0)->{$tag};
         }
-        return false;
+        return "Not provided";
     }
 
 }

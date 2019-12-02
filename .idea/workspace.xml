@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6da14443-e9c7-4175-a661-14ff79325cee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Ads/Advertisement.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Ads/Advertisement.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Ads/Scraper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Ads/Scraper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Ads/ScrapingMethods.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Ads/ScrapingMethods.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Car.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Car.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/CurlExecuteService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CurlExecuteService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_29_112539_create_cars_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_29_112539_create_cars_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/master.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -122,7 +125,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../users-manager" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -175,6 +178,7 @@
       <updated>1575026555462</updated>
       <workItem from="1575026561319" duration="10690000" />
       <workItem from="1575109191012" duration="79505000" />
+      <workItem from="1575273549648" duration="9924000" />
     </task>
     <servers />
   </component>
@@ -186,7 +190,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

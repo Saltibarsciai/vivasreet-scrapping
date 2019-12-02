@@ -28,14 +28,14 @@ class Advertisement extends ScrapingMethods
     private function init(): void
     {
         $this->createCarRecord();
-        $this->createImages();
     }
 
     private function createCarRecord(): void
     {
-        //If record exists
-        if ($record = Car::where('ad_id', $this->advertId())->without('images')->first()) {
-            $this->car = $record;
+        //If record exists don't create
+        if ($this->car = Car::where('ad_id', $this->advertId())->first()) {
+            $this->car->update(['active' => true]);
+            return;
         }
         //If not, then create
         $this->car = Car::create([
@@ -46,23 +46,29 @@ class Advertisement extends ScrapingMethods
             'year' => $this->year(),
             'phone' => $this->phone(),
             'ad_id' => $this->advertId(),
-            'link_to_website' => $this->link()
+            'link_to_website' => $this->link(),
+            'active' => true,
         ]);
+        $this->createImages();
     }
+
     private function createImages(): void
     {
-        //specific tag if only profile photo provided
-        if ($this->imageSource = $this->profile()) {
-            $this->imageId = 'single';
+        if ($this->hasProfile()) { // Profile photo has different html attribute
+            $this->imageSource = $this->profile();
+            $this->imageId = 'single_img_id';
             $this->downloadImage();
-        }
-        //specific tag if profile photo provided + 1
-        if ($this->imageSource = $this->getPhoto(0, 'src')) {
+        } elseif ($this->hasPhoto(0, 'src')) { //photo with 0 index has different html attribute
+            $this->imageSource = $this->getPhoto(0, 'src');
             $this->imageId = $this->getPhoto(0, 'id');
             $this->downloadImage();
+        } else {
+            $this->setPlaceholderImage();
         }
-        for ($i = 1; $i <= 3; $i++) {
-            if ($this->imageSource = $this->getPhoto($i, 'data-src')) {
+
+        for ($i = 1; $i <= 3; $i++) { //photos from second has similar html attributes
+            if ($this->hasPhoto($i, 'data-src')) {
+                $this->imageSource = $this->getPhoto($i, 'data-src');
                 $this->imageId = $this->getPhoto($i, 'id');
                 $this->downloadImage();
             } else {
@@ -70,18 +76,20 @@ class Advertisement extends ScrapingMethods
             }
         }
     }
-    private function downloadImage(): void
+    private function downloadImage()
     {
         $path = "{$this->advertId()}/{$this->imageId}.jpg";
-        //Return if already downloaded
+
         if (Image::where('path', '/storage/' . $path)->first()) {
-            return;
+            return true;
         }
+
         $data = app(CurlExecuteService::class)->curlExecute($this->imageSource);
         Storage::disk('public')->put($path, $data);
         $this->car->images()->create([
             'path' => '/storage/' . $path
         ]);
+        return true;
     }
     private function setPlaceholderImage(): void
     {

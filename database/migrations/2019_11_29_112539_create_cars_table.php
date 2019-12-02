@@ -23,6 +23,7 @@ class CreateCarsTable extends Migration
             $table->string('mileage')->default('Not provided');
             $table->bigInteger('phone')->default(0);
             $table->string('link_to_website')->default('Not provided');
+            $table->boolean('active')->default(false);
             $table->timestamps();
         });
     }

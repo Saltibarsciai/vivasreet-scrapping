@@ -1,7 +1,10 @@
 @extends('layout')
 @section('content')
     <main class="w-75 mx-auto">
-        <img src="https://uglymugs.org/um/uploads/Vivastreet-logo-grey_picmonkeyed.jpg" class="w-50 mt-2" alt="vivastreet">
+        <div class="d-flex">
+            <img src="https://uglymugs.org/um/uploads/Vivastreet-logo-grey_picmonkeyed.jpg" class="w-50 mt-2 h-50 align-self-center" alt="vivastreet">
+            <img src="https://miro.medium.com/max/2560/1*f2-zeAOSNB4RGlqH9emTlQ.jpeg" class="w-50 mt-2 h-50" alt="vivastreet">
+        </div>
         <form class="form-inline w-100 p-2 mt-5" method="post" action="{{route('cars.store')}}">
             @csrf
             <div style="width: 70%; margin-right: 5%">

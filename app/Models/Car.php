@@ -14,7 +14,8 @@ class Car extends Model
         'year',
         'phone',
         'ad_id',
-        'link_to_website'
+        'link_to_website',
+        'active'
     ];
     protected $with = ['images'];
     public function images()

@@ -18,7 +18,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        $data = Car::cursor();
+        $data = Car::where('active', true)->get();
         return view('partials.master', compact('data'));
     }
 
