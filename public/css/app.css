@@ -11371,3 +11371,14 @@ a.text-dark:focus {
     background-size: 100%;
     background-position: center;
 }
+.viva-list-item{
+    display: flex;
+}
+@media only screen and (max-width: 1000px) {
+    .viva-list-item{
+        display: block;
+    }
+    .viva-list-item .container{
+        margin-top: 20px;
+    }
+}

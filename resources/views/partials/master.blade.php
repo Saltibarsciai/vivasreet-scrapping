@@ -16,7 +16,7 @@
         <h1 class="my-5 font-weight-bold">LIST</h1>
         <ul class="list-group">
             @foreach($data as $item)
-                <li class="list-group-item d-flex p-4">
+                <li class="list-group-item viva-list-item p-4">
                     <aside class="mr-3 images-grid">
                         @foreach($item->images as $i => $image)
                             <img class="mr-1" width="150px" height="150px" src="{{$image->path}}" alt="{{$image->id}}"/>
