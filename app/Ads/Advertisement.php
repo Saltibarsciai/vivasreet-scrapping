@@ -76,18 +76,21 @@ class Advertisement extends ScrapingMethods
             }
         }
     }
-    private function downloadImage()
+
+    /**
+     * @return bool
+     */
+    private function downloadImage(): bool
     {
         $path = "{$this->advertId()}/{$this->imageId}.jpg";
 
-        if (Image::where('path', '/storage/' . $path)->first()) {
+        if (Image::where('path', '/heroku-storage/' . $path)->first()) {
             return true;
         }
-
         $data = app(CurlExecuteService::class)->curlExecute($this->imageSource);
-        Storage::disk('public')->put($path, $data);
+        Storage::disk('heroku')->put($path, $data);
         $this->car->images()->create([
-            'path' => '/storage/' . $path
+            'path' => '/heroku-storage/' . $path
         ]);
         return true;
     }

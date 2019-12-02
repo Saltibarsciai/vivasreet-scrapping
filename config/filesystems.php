@@ -64,6 +64,11 @@ return [
             'url' => env('AWS_URL'),
         ],
 
+        'heroku' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/heroku-storage',
+        ],
+
     ],
 
 ];
