@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6da14443-e9c7-4175-a661-14ff79325cee" name="Default Changelist" comment="" />
+    <list default="true" id="6da14443-e9c7-4175-a661-14ff79325cee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Ads/Scraper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Ads/Scraper.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +118,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../users-manager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/heroku-storage" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -129,13 +132,14 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dominykas\Projects\orca-task\public\heroku-storage" />
+      <recent name="C:\Users\Dominykas\Projects\orca-task\app\Services" />
+      <recent name="C:\Users\Dominykas\Projects\orca-task\resources\views\partials" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dominykas\Projects\orca-task\app\Ads" />
       <recent name="C:\Users\Dominykas\Projects\orca-task\app\Models" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Dominykas\Projects\orca-task\app\Services" />
-      <recent name="C:\Users\Dominykas\Projects\orca-task\resources\views\partials" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -168,7 +172,8 @@
       <updated>1575026555462</updated>
       <workItem from="1575026561319" duration="10690000" />
       <workItem from="1575109191012" duration="79505000" />
-      <workItem from="1575273549648" duration="14469000" />
+      <workItem from="1575273549648" duration="15910000" />
+      <workItem from="1575455084107" duration="1869000" />
     </task>
     <servers />
   </component>
